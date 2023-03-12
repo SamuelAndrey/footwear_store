@@ -21,6 +21,7 @@
                 <td><?=  $no++ ?></td>
                 <td><?=  $brg->nama_brg ?></td>
                 <td><?=  $brg->keterangan ?></td>
+                <td><?=  $brg->kategori ?></td>
                 <td><?=  $brg->harga ?></td>
                 <td><?=  $brg->stok ?></td>
                 <td>

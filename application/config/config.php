@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/footwear_store/';
+// $config['base_url'] = 'http://localhost:8074/footwear_store/'; // Khusus Samuel
 
 /*
 |--------------------------------------------------------------------------
