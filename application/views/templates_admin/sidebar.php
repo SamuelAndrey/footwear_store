@@ -32,7 +32,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/invoices') ?>">
+                <a class="nav-link" href="<?= base_url('admin/invoice') ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Invoices</span></a>
             </li>
