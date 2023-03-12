@@ -117,6 +117,16 @@
                             </div>
                         </li>
 
+                        <div class="navbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <?php $keranjang = 'Keranjang Belanja: '.$this->cart->total_items().'items' ?>
+
+                                    <?php echo anchor('dashboard/detail_keranjang', $keranjang)  ?>
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
