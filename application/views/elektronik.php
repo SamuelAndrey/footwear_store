@@ -23,7 +23,7 @@
 
 
     <div class="row text-center mt-3">
-        <?php foreach ($barang as $brg) : ?>
+        <?php foreach ($elektronik as $brg) : ?>
 
             <div class="card ml-3 mb-3" style="width: 16rem;">
                 <img class="card-img-top" src="<?php echo base_url('uploads/').$brg->gambar?>" alt="Card image cap">
