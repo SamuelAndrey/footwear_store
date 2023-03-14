@@ -18,7 +18,7 @@ class Kategori extends CI_Controller{
     }
 
     public function kaos_kaki(){
-        $data['sepatu'] = $this->model_kategori->data_kaos_kaki()->result();
+        $data['kaos_kaki'] = $this->model_kategori->data_kaos_kaki()->result();
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('kaos_kaki', $data);
