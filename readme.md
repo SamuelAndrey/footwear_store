@@ -1,7 +1,7 @@
-#Tugas Akhir Proyek Perangkat Lunak
-##Footwear Store | Aplikasi penjualan alas kaki
+# Tugas Akhir Proyek Perangkat Lunak
+## Footwear Store | Aplikasi penjualan alas kaki
 
-###Project Team
+### Project Team
 - Samuel Andrey Aji Prasetya
 - Muhammad Roynaldi
 - Rangga Dwi Saputra
@@ -9,7 +9,7 @@
 - Muhammad Rizal Pratama
 
 
-###Teknologi
+### Teknologi
 - Code igniter 3
 - MySQL
 - Bootsrap 4
