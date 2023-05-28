@@ -10,7 +10,7 @@ class Dashboard_admin extends CI_Controller {
             Anda belum Login!
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"<span aria-hidden="true">&times;</span></button>
             </div>');
-            redirect('auth/login');
+            redirect('auth/loginAdmin');
         }
     }
 	
