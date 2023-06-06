@@ -69,7 +69,7 @@ class Auth extends CI_Controller{
                 Username atau Password Anda Salah!
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"<span aria-hidden="true">&times;</span></button>
                 </div>');
-                redirect('auth/login');
+                redirect('auth/loginAdmin');
             } else{
                 $this->session->set_userdata('username', $auth->username);
                 $this->session->set_userdata('role_id', $auth->role_id);
@@ -92,5 +92,11 @@ class Auth extends CI_Controller{
     {
         $this->session->sess_destroy();
         redirect('auth/login');
+    }
+
+    public function logoutAdmin ()
+    {
+        $this->session->sess_destroy();
+        redirect('auth/loginAdmin');
     }
 }

@@ -1,15 +1,15 @@
 <div class="container-fluid">
-    <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button>
+    <button class="btn btn-sm mb-3" data-toggle="modal" data-target="#tambah_barang" style="color:lime; background-color:#2F2F2F;">Add Product</button>
 
-    <table class="table table-bordered">
-        <tr>
+    <table class="table table-bordered text-success" style="background-color:#000000;">
+        <tr class="table-active">
             <th>NO</th>
-            <th>NAMA BARANG</th>
+            <th>PRODUCT</th>
             <th>KETERANGAN</th>
             <th>KATEGORI</th>
             <th>HARGA</th>
             <th>STOCK</th>
-            <th colspan="3">AKSI</th>
+            <th colspan="2">AKSI</th>
         </tr>
 
 
@@ -24,9 +24,9 @@
                 <td><?=  $brg->kategori ?></td>
                 <td><?=  $brg->harga ?></td>
                 <td><?=  $brg->stok ?></td>
-                <td>
+                <!-- <td>
                     <div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>
-                </td>
+                </td> -->
                 <td>
                     <?= anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>') ?>
                 </td>

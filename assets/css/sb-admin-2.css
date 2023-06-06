@@ -31,7 +31,7 @@
   --warning: #f6c23e;
   --danger: #e74a3b;
   --light: #f8f9fc;
-  --dark: #5a5c69;
+  --dark: #000000;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -68,6 +68,9 @@ body {
   text-align: left;
   background-color: #fff;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik+Puddles&display=swap');
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -6481,7 +6484,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #5a5c69 !important;
+  background-color: #000000 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
