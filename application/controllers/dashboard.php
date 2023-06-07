@@ -27,7 +27,7 @@ class Dashboard extends CI_Controller {
         );
         
         $this->cart->insert($data);
-        redirect('dashboard');
+        redirect('dashboard/detail_keranjang');
     }
 
     public function detail_keranjang()
@@ -41,7 +41,7 @@ class Dashboard extends CI_Controller {
     public function hapus_keranjang()
     {
         $this->cart->destroy();
-        redirect('dashboard/index');
+        redirect('welcome');
     }
 
     public function pembayaran()

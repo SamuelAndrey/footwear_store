@@ -56,7 +56,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/payment') ?>">
+                <a class="nav-link" href="<?= base_url('admin/konfirmasi_transaksi') ?>">
                     <!--<i class="fas fa-fw fa-table"></i>-->
                     <span class="text-success"><h4>Payment Confirmation</h4></span></a>
             </li>

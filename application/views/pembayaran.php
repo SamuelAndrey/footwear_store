@@ -47,12 +47,16 @@
 
                 <div class="form-group">
                     <label>Pilih BANK</label>
-                    <select class="form-control">
-                        <option>BCA - xxxxxxx</option>
-                        <option>BNI - xxxxxxx</option>
-                        <option>BRI - xxxxxxx</option>
-                        <option>MANDIRI - xxxxxxx</option>
+                    <select class="form-control" name="bank">
+                        <option>BCA</option>
+                        <option>BNI</option>
+                        <option>BRI</option>
+                        <option>MANDIRI</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label>No. Rekening</label>
+                    <input type="text" name="no_rek" placeholder="Nomer Telepon Anda" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-sm btn-primary mb-3">Pesan</button>
