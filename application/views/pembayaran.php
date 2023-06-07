@@ -56,7 +56,7 @@
                 </div>
                 <div class="form-group">
                     <label>No. Rekening</label>
-                    <input type="text" name="no_rek" placeholder="Nomer Telepon Anda" class="form-control">
+                    <input type="text" name="no_rek" placeholder="Nomer Rekening Anda" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-sm btn-primary mb-3">Pesan</button>
