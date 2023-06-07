@@ -25,7 +25,7 @@
         <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar" style="background-color:#1E1C1C;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin/dashboard_admin')?>">
                 <!-- <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div> -->
