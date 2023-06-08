@@ -3,13 +3,14 @@
 
     <table class="table table-bordered text-success" style="background-color:#000000;">
         <tr class="table-active">
-            <th>NO</th>
+            <th>No</th>
             <th>PRODUCT</th>
-            <th>KETERANGAN</th>
-            <th>KATEGORI</th>
-            <th>HARGA</th>
-            <th>STOCK</th>
-            <th colspan="2">AKSI</th>
+            <!-- <th>Keterangan</th> -->
+            <th>Image</th>
+            <th>Kategori</th>
+            <th>Harga</th>
+            <th>Stock</th>
+            <th colspan="2">Action</th>
         </tr>
 
 
@@ -20,18 +21,19 @@
             <tr>
                 <td><?=  $no++ ?></td>
                 <td><?=  $brg->nama_brg ?></td>
-                <td><?=  $brg->keterangan ?></td>
+                <!-- <td><?=  $brg->keterangan ?></td> -->
+                <td><img class="card-img-top" style="width:170px;" src="<?php echo base_url('uploads/').$brg->gambar?>" alt="Card image cap"></td>
                 <td><?=  $brg->kategori ?></td>
                 <td><?=  $brg->harga ?></td>
                 <td><?=  $brg->stok ?></td>
                 <!-- <td>
                     <div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>
                 </td> -->
-                <td>
-                    <?= anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>') ?>
+                <td style="text-align:center;">
+                    <?= anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn"><i class="fas fa-edit" style="color:lime"></i></div>') ?>
                 </td>
-                <td>
-                    <?= anchor('admin/data_barang/hapus/' . $brg->id_brg, '<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>') ?>
+                <td style="text-align:center;">
+                    <?= anchor('admin/data_barang/hapus/' . $brg->id_brg, '<div class="btn "><i class="fas fa-trash" style="color:#DC0000;"></i></div>') ?>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -41,10 +43,10 @@
 
 <!-- Modal -->
 <div class="modal fade" id="tambah_barang" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+  <div class="modal-dialog" role="document" style="background-color:#000000;">
+    <div class="modal-content" style="background-color:#000000;">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">FORM INPUT PRODUK</h5>
+        <h5 class="modal-title" id="exampleModalLabel" style="color:lime;">Tambah Produk</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -93,9 +95,9 @@
           </div>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer d-flex justify-content-center align-items-center">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <button type="submit" class="btn btn-lg" style="color:black; background-color:lime;">ADD</button>
       </div>
 
       </form>

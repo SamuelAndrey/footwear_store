@@ -1,5 +1,5 @@
 <div class="container fluid">
-    <h3><i class="fas fa-edit"></i>EDIT DATA BARANG</h3>
+    <h3 style="color:lime;"><i class="fas fa-edit"></i>EDIT DATA BARANG</h3>
 
     <?php foreach($barang as $brg) : ?>
 
@@ -25,8 +25,9 @@
                 <label for="">Stock</label>
                 <input type="text" name="stok" class="form-control" value="<?= $brg->stok ?>"></input>
             </div>
-
-            <button type="submit" class="btn btn-primary btn-sm mt-3">Simpan</button>
+            <div class="container d-flex justify-content-center align-items-center">
+                <button type="submit" class="btn btn-lg mt-3" style="color:black; background-color:lime;">Simpan</button>
+            </div>
         </form>
 
     <?php endforeach; ?>

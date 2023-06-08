@@ -1,14 +1,14 @@
 <div class="container-fluid">
-    <h4>Invoice Pemesanan Produk</h4>
+    <h4>Invoices</h4>
 
     <table class="table table-bordered table-hover table-striped">
         <tr>
-            <th>Id Invoice</th>
+            <th>Id_Invoice</th>
             <th>Nama Pemesan</th>
             <th>Alamat Pengiriman</th>
             <th>Tanggal Pemesanan</th>
             <th>Batas Pembayaran</th>
-            <th>Aksi</th>
+            <th style="text-align:center;">Action</th>
         </tr>
 
         <?php foreach ($invoice as $inv): ?>
@@ -19,7 +19,7 @@
             <td><?php echo $inv->alamat ?></td>
             <td><?php echo $inv->tgl_pesan ?></td>
             <td><?php echo $inv->batas_bayar ?></td>
-            <td><?php echo anchor('admin/invoice/detail/'.$inv->id, '<div class="btn btn-sm btn-primary">Detail</div>')?></td>
+            <td><?php echo anchor('admin/invoice/detail/'.$inv->id, '<div class="btn" style="text-align:center;"><i class="fa fa-info-circle" style="color:lime; font-size:25px; text-align:center;"></i></div>')?></td>
         </tr>
 
         <?php endforeach; ?>

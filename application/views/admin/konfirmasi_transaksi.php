@@ -1,9 +1,9 @@
 <div class="container-fluid">
-    <h4>Invoice Pemesanan Produk</h4>
+    <h4>Payment Confirmation</h4>
 
     <table class="table table-bordered table-hover table-striped">
         <tr>
-            <th>Id Invoice</th>
+            <th>Id_Invoice</th>
             <th>Nama Pemesan</th>
             <th>Alamat Pengiriman</th>
             <th>Tanggal Pemesanan</th>
