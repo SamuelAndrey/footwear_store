@@ -61,11 +61,6 @@
           </div>
 
           <div class="form-group">
-            <label>Keterangan</label>
-            <input type="text" name="keterangan" class="form-control"></input>
-          </div>
-
-          <div class="form-group">
             <label>Kategori</label>
             <select class="form-control" name="kategori">
               <option>Sepatu</option>

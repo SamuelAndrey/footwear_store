@@ -9,10 +9,6 @@
                 <input type="text" name="nama_brg" class="form-control" value="<?= $brg->nama_brg ?>"></input>
             </div>
             <div class="form-group">
-                <label for="">Keterangan</label>
-                <input type="text" name="keterangan" class="form-control" value="<?= $brg->keterangan ?>"></input>
-            </div>
-            <div class="form-group">
                 <label for="">Kategori</label>
                 <input type="hidden" name="id_brg" class="form-control" value="<?= $brg->id_brg ?>"></input>
                 <input type="text" name="kategori" class="form-control" value="<?= $brg->kategori ?>"></input>
