@@ -4,20 +4,23 @@ class model_invoice extends CI_Model{
     public function index()
     {
         date_default_timezone_set('Asia/Jakarta');
-        $nama = $this->input->post('nama');
+        // $nama = $this->input->post('nama');
         $alamat = $this->input->post('alamat');
         $bank = $this->input->post('bank');
         $no_telp = $this->input->post('no_telp');
         $no_rek = $this->input->post('no_rek');
+        $total_bayar = $this->input->post('total_bayar');
  
         $invoice = array (
-            'nama' => $nama,
+            'id_member' => $this->session->userdata('id_member'),
+            'nama' => $this->session->userdata('nama'),
             'alamat' => $alamat,
             'tgl_pesan' => date('Y-m-d H:i:s'),
             'batas_bayar' => date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 1, date('Y'))),
             'bank' => $bank,
             'no_telepon' => $no_telp,
             'no_rekening' => $no_rek,
+            'total_bayar' => $total_bayar,
         );
         $this->db->insert('tb_invoice', $invoice);
         $id_invoice = $this->db->insert_id();

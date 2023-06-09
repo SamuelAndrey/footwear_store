@@ -12,16 +12,18 @@
                         $grand_total = $grand_total + $item['subtotal'];
                     }
 
-                echo "<h4>Total Belanja Anda: Rp. ".number_format($grand_total, 0,',','.');
+                echo "<h4>Total Belanja Anda: Rp. ".number_format($grand_total, 0,',','.') . " + ongkir Rp. 20.000";
+                $grand_total += 20000;
                 ?>
             </div><br><br>
             <h3>Input Alamat Pengiriman dan Pembayaran</h3>
 
             <form method="post" action="<?php echo base_url('dashboard/proses_pesanan') ?> ">
 
+                <input type="hidden" name="total_bayar" value="<?= $grand_total ?>">
                 <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" name="nama" placeholder="Nama Lengkap Anda" class="form-control">
+                    <input type="text" name="" placeholder="Nama Lengkap Anda" class="form-control" value="<?= $this->session->userdata('nama') ?>" readonly>
                 </div>
 
                 <div class="form-group">

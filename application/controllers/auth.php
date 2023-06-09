@@ -72,6 +72,7 @@ class Auth extends CI_Controller{
 
                 redirect('auth/loginMember');
             } else{
+                $this->session->set_userdata('nama', $auth->nama);
                 $this->session->set_userdata('username', $auth->username);
                 $this->session->set_userdata('id_member', $auth->id_member);
                 redirect('welcome');
