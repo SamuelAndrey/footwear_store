@@ -8,6 +8,9 @@
             $this->form_validation->set_rules('nama', 'Nama', 'required', [
                 'required' => 'Nama wajib diisi!'
             ]);
+            $this->form_validation->set_rules('email', 'Email', 'required', [
+                'required' => 'Email wajib diisi!'
+            ]);
             $this->form_validation->set_rules('username', 'Username', 'required', [
                 'required' => 'Username wajib diisi!'
             ]);
@@ -26,13 +29,13 @@
             else {
                 $data = array(
                     'nama' => $this->input->post('nama'),
+                    'email' => $this->input->post('email'),
                     'username' => $this->input->post('username'),
-                    'password' => $this->input->post('password_1'),
-                    'role_id' => 2
+                    'password' => $this->input->post('password_1')
                 );
 
-                $this->db->insert('tb_user', $data);
-                redirect('auth/login');
+                $this->db->insert('tb_member', $data);
+                redirect('auth/loginMember');
             }
         }
     }
