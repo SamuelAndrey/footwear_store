@@ -69,10 +69,12 @@ class Auth extends CI_Controller{
                 Username atau Password Anda Salah!
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"<span aria-hidden="true">&times;</span></button>
                 </div>');
-                redirect('auth/login');
+
+                redirect('auth/loginMember');
             } else{
                 $this->session->set_userdata('username', $auth->username);
-                $this->session->set_userdata('role_id', $auth->role_id);
+                $this->session->set_userdata('id_member', $auth->id_member);
+                redirect('welcome');
             }
             
         }
