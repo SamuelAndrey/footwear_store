@@ -2,7 +2,7 @@
 
 class model_member extends CI_Model {
     public function getDataMember($id_member) {
-        $this->db->where('id_member', '$id_member');
+        $this->db->where('id_member', $id_member);
         $result = $this->db->get('tb_member');
         
         if ($result->num_rows() > 0){

@@ -81,22 +81,55 @@ class Dashboard extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    public function updateMember() {
+    public function updateDataMember() {
         
+        $nama = $this->input->post('nama');
         $username = $this->input->post('username');
+        $newPassword = $this->input->post('newPassword');
+        $newPassword1 = $this->input->post('newPassword1');
         $password = $this->input->post('password');
+        $verifPassword = $this->input->post('verifPassword');
 
-        $data = array(
-            'username' => $username,
-            'password' => $password,
-        );
+        if ($password == $verifPassword) {
 
-        $where = array(
-            'id_member' => $this->session->userdata('id_member')
-        );
+            if ($newPassword == "" AND $newPassword == "") {
+                $data = array(
+                    'nama' => $nama,
+                    'username' => $username
+                );
+            } else {
+                if ($newPassword != $newPassword1) {
+                    echo "<script>
+                    alert('Password baru tidak sama!');
+                    window.location.href = '".base_url('dashboard/updateDataDiri')."';
+                    </script>";
+                } else {
+                    $data = array(
+                        'nama' => $nama,
+                        'username' => $username,
+                        'password' => $newPassword1,
+                    );
+                }
+            }
 
-        $this->model_member->update_data($where, $data, 'tb_member');
-        redirect('admin/data_barang/index');
+            $where = array(
+                'id_member' => $this->session->userdata('id_member')
+            );
+    
+            $this->model_member->update_data($where, $data, 'tb_member');
+
+            echo "<script>
+                    alert('Berhasil Merubah Data!');
+                    window.location.href = '".base_url('dashboard/updateDataDiri')."';
+                    </script>";
+        } else {
+            echo "<script>
+                    alert('Password salah atau kosong!');
+                    window.location.href = '".base_url('dashboard/updateDataDiri')."';
+                    </script>";
+        }
+
+
 
     }
 }
