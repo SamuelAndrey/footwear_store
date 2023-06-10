@@ -33,7 +33,6 @@ class Dashboard extends CI_Controller {
     public function detail_keranjang()
     {
         $this->load->view('templates/header');
-
         $this->load->view('keranjang');
         $this->load->view('templates/footer');
     }
