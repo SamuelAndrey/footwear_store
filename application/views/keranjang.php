@@ -115,9 +115,10 @@ hr{
                     <thead>
                         <tr>
                         <th scope="col">Item</th>
+                        <th scope="col">Size</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Subtotal</th>
-                        <th scope="col"><i class="fa-regular fa-trash-can"></i></th>
+                       
                         </tr>
                     </thead>
                     <tbody>
@@ -134,6 +135,7 @@ hr{
                                 </div>
                             </div>
                         </td>
+                        <td  class="align-middle text-center">40</td>
 
                         <td class="align-middle text-center"><input type="number" value="1" >
                         <?php echo $items['qty'] ?>
@@ -141,12 +143,7 @@ hr{
                         <td class="align-middle text-center">
                             Rp. <?php echo number_format($items['subtotal'], 0,',','.') ?>
                         </td>
-                        <td class="align-middle text-center">
-                            <button style="border: none;">
-                                <i class="fa-regular fa-trash-can" style="color:#DC0000; font-size: 1.7em;"></i>
-
-                            </button>
-                        </td>
+         
                         </tr>
                         <?php endforeach; ?>
     

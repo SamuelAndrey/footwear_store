@@ -77,7 +77,7 @@
             <form method="post" action="<?php echo base_url('dashboard/proses_pesanan') ?> " >
                 <fieldset class="border border-dark w-100 p-3 mx-auto " style="border-radius: 5px; " >
                     <legend  class="float-none w-auto p-2" >Payments</legend>
-                    <input type="hidden" name="total_bayar" value="<?= $grand_total ?>">
+                    
                     <label for="name">Full Name</label>
                     <input type="text" id="" name="" value="<?= $this->session->userdata('nama') ?>" readonly><br>
 
@@ -128,6 +128,7 @@
                     </div>
 
                     <br><br>
+                    <input type="hidden" name="total_bayar" value="<?= $grand_total ?>">
                     <button type="submit">ORDER</button>
                 </fieldset>
             </form>
