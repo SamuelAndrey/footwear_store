@@ -4,7 +4,7 @@ class Kategori extends CI_Controller{
     public function sepatu(){
         $data['sepatu'] = $this->model_kategori->data_sepatu()->result();
         $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+
         $this->load->view('sepatu', $data);
         $this->load->view('templates/footer');
     }
@@ -12,7 +12,7 @@ class Kategori extends CI_Controller{
     public function sandal(){
         $data['sandal'] = $this->model_kategori->data_sandal()->result();
         $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+
         $this->load->view('sandal', $data);
         $this->load->view('templates/footer');
     }
@@ -20,7 +20,7 @@ class Kategori extends CI_Controller{
     public function kaos_kaki(){
         $data['kaos_kaki'] = $this->model_kategori->data_kaos_kaki()->result();
         $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+ 
         $this->load->view('kaos_kaki', $data);
         $this->load->view('templates/footer');
     }
@@ -28,7 +28,7 @@ class Kategori extends CI_Controller{
     public function elektronik(){
         $data['elektronik'] = $this->model_kategori->data_elektronik()->result();
         $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+
         $this->load->view('elektronik', $data);
         $this->load->view('templates/footer');
     }

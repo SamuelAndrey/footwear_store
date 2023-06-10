@@ -113,7 +113,7 @@
                                     <?php if($this->session->userdata('username')){ ?>
                                         <!-- <li class="text-success"><div style="color:lime;"> <?php echo $this->session->userdata('username') ?></div></li> -->
                                         <li >
-                                            <?= anchor('auth/logoutAdmin','<div class="btn btn-outline-success btn-lg"><i class="fa" style="font-size:48px;color:lime">&#xf08b;</i></div>') ?>    
+                                            <?= anchor('auth/logoutAdmin','<div class="btn btn-outline-success btn-lg"><i class="fa" style="font-size:1.5em; color:lime">&#xf08b;</i></div>') ?>    
                                         </li>
                                     <?php }else{ ?>
                                         <li><?php echo anchor('auth/loginAdmin', 'Login');?></li>

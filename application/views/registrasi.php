@@ -1,54 +1,58 @@
-<body class="bg-gradient-primary">
+<head>
+    <title>Register Member</title>
+    <link href="<?php echo base_url()?>assets/css/form.css" rel="stylesheet" type="text/css">
+    <style>
+        .container{
+            flex-direction: row !important;
+            justify-content: space-evenly;
+        }
+        @media only screen and (max-width: 990px) {
+            .container{
+                flex-wrap: wrap;
+            }
+            .form1{
+                flex-grow: 1;
+            }
 
-    <div class="container">
+        }
+    </style>
 
-        <div class="card o-hidden border-0 shadow-lg col-lg-6 my-5 mx-auto">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">From Registrasi</h1>
-                            </div>
-                            <form method="post" action="<?php echo base_url('registrasi/index') ?>"  class="user">
-                                
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Nama Anda" name="nama">
-                                        <?php echo form_error('nama', '<div class="text-danger small ml-2">','</div>'); ?>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email" name="email">
-                                        <?php echo form_error('email', '<div class="text-danger small ml-2">','</div>'); ?>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Username Anda" name="username">
-                                        <?php echo form_error('username', '<div class="text-danger small ml-2">','</div>'); ?>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password" name="password_1">
-                                            <?php echo form_error('password_1', '<div class="text-danger small ml-2">','</div>'); ?>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Ulangi Password" name="password_2">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block">Daftar</button>
-                            </form>
-                            <hr>
-                            <div class="text-center">
-                                <a class="small" href="<?php echo base_url('auth/login') ?>">Sudah punya akun? Silahkan Login!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+
+</head>
+<body>
+    <div class="container" >
+
+    <div class="content1" >
+        <img src="<?php echo base_url()?>assets/img/sikuil.png"alt="" srcset="" style="width:7em;" >
+        <h4>Welcome to MySikuil!</h4>
+        <p>Tak kenal maka tak sayang :) </p>
+        <p>Isilah data disamping untuk menjadi member</p>
+    </div>
+
+    <div class="form1" style="width:40%">
+        <form method="post" action="<?php echo base_url('registrasi/index') ?>"  class="user">
+            <fieldset class="border border-dark w-100 p-3 mx-auto " style="border-radius: 5px; " >
+                <legend  class="float-none w-auto p-2" >Register</legend>
+                <input type="text" id="nama" name="nama" placeholder=" Full Name">
+                    <?php echo form_error('nama', '<div class="text-danger small ml-2">','</div>'); ?><br>
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                     <?php echo form_error('email', '<div class="text-danger small ml-2">','</div>'); ?><br>
+                <input type="text" id="username" name="username" placeholder=" Username">
+                    <?php echo form_error('username', '<div class="text-danger small ml-2">','</div>'); ?><br>
+                <input type="password" id="password_1" name="password_1" placeholder="Password">
+                    <?php echo form_error('password_1', '<div class="text-danger small ml-2">','</div>'); ?><br>    
+                <input type="password" id="password_2" name="password_2" placeholder="Confirm Password">
+                <br>
+                
+                <button type="submit" >Register</button>
+                <p>
+                    <span>Alredy a Member?</span>
+                    <a href="<?php echo base_url('auth/login') ?>"><span>Login.</span></a>
+                </p>
+            </fieldset>
+        </form>
+    </div>
 
     </div>
+

@@ -23,7 +23,7 @@ class Dashboard extends CI_Controller {
                 'qty'     => 1,
                 'price'   => $barang->harga,
                 'name'    => $barang->nama_brg,
-                
+                'gambar'  => $barang->gambar,
         );
         
         $this->cart->insert($data);
@@ -33,7 +33,7 @@ class Dashboard extends CI_Controller {
     public function detail_keranjang()
     {
         $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+
         $this->load->view('keranjang');
         $this->load->view('templates/footer');
     }
@@ -47,7 +47,7 @@ class Dashboard extends CI_Controller {
     public function pembayaran()
     {
         $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+
         $this->load->view('pembayaran');
         $this->load->view('templates/footer');
     }
@@ -58,7 +58,7 @@ class Dashboard extends CI_Controller {
         if($is_processed){
             $this->cart->destroy();
             $this->load->view('templates/header');
-            $this->load->view('templates/sidebar');
+
             $this->load->view('proses_pesanan');
             $this->load->view('templates/footer');
         } else {
@@ -69,7 +69,7 @@ class Dashboard extends CI_Controller {
     public function detail($id_brg){
         $data['barang'] = $this->model_barang->detail_brg($id_brg);
         $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+
         $this->load->view('detail_barang', $data);
         $this->load->view('templates/footer');
     }

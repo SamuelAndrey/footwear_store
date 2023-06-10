@@ -1,49 +1,30 @@
-d<body class="bg-gradient-primary">
+<head>
+    <title>Login Member</title>
+    <link href="<?php echo base_url()?>assets/css/form.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container" >
 
-    <div class="container">
+<div class="content1" >
+     <img src="<?php echo base_url()?>assets/img/sikuil.png"  alt="" srcset="" style="width:7em;" >
+     <h4>WELCOME BACK!</h4>
+     <p>Sudah siap dompet kering? Login kembali.</p>
+</div>
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+<div class="form1" style="width:40%">
+    <?php echo $this->session->flashdata('pesan') ?>
+    <form method="post" action="<?php echo base_url('auth/loginMember')?>" class="user">
+        <fieldset class="border border-dark w-100 p-3 mx-auto " style="border-radius: 5px; " >
+            <legend  class="float-none w-auto p-2" >Login</legend>
+            <input type="text" id="username" name="username" placeholder="Username"> <?php echo form_error('username', '<div class="text-danger small ml-2">','</div>'); ?><br>
+            <input type="password" id="password" name="password" placeholder="Password"> <?php echo form_error('password', '<div class="text-danger small ml-2">','</div>'); ?><br>
+            <button >LOGIN</button>
+            <p>
+                <span>Not a Member?</span>
+                <a href="<?php echo base_url('registrasi/index');?>"><span>Join Us.</span></a>
+            </p>
+        </fieldset>
+    </form>
+</div>
 
-            <div class="col-xl-5 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Form Login</h1>
-                                    </div>
-                                    <?php echo $this->session->flashdata('pesan') ?>
-                                    <form method="post" action="<?php echo base_url('auth/loginMember')?>" class="user">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Username Anda" name="username">
-                                                <?php echo form_error('username', '<div class="text-danger small ml-2">','</div>'); ?>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password" name="password">
-                                                <?php echo form_error('password', '<div class="text-danger small ml-2">','</div>'); ?>
-                                        </div>
-                                        
-                                        <button type="submit" class="btn btn-primary form-control">Login</button>
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="<?php echo base_url('registrasi/index');?>">Belum punya akun? Daftar </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>

@@ -24,7 +24,6 @@ class Data_barang extends CI_Controller {
 
     public function tambah_aksi() {
         $nama_brg = $this->input->post('nama_brg');
-        $keterangan = $this->input->post('keterangan');
         $kategori = $this->input->post('kategori');
         $harga = $this->input->post('harga');
         $stok = $this->input->post('stok');
@@ -46,7 +45,6 @@ class Data_barang extends CI_Controller {
 
         $data = array(
             'nama_brg' => $nama_brg,
-            'keterangan' => $keterangan,
             'kategori' => $kategori,
             'harga' => $harga,
             'stok' => $stok,
@@ -69,14 +67,12 @@ class Data_barang extends CI_Controller {
     public function update() {
         $id = $this->input->post('id_brg');
         $nama_brg = $this->input->post('nama_brg');
-        $keterangan = $this->input->post('keterangan');
         $kategori = $this->input->post('kategori');
         $harga = $this->input->post('harga');
         $stok = $this->input->post('stok');
 
         $data = array(
             'nama_brg' => $nama_brg,
-            'keterangan' => $keterangan,
             'kategori' => $kategori,
             'harga' => $harga,
             'stok' => $stok

@@ -1,40 +1,50 @@
-<div class="container-fluid">
+<head>
+    <link href="<?php echo base_url()?>assets/css/shop.css" rel="stylesheet" type="text/css">
+</head>
+<div class="container" id="shop" style="padding-top: 5em; padding-bottom:5vh;  min-height: 39em; ">
+        <div class="row ">
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img class="d-block w-100" src="<?= base_url('assets/')?>img/slider1.jpg" alt="First slide">
+            <div class="col-3">
+                <div class="title1">
+                    <h3 class="title1">Category</h3>
+                </div><hr class="garis">
+                
+                    <p class="sideCategory "><a href="<?php echo base_url('kategori/sandal')?>">Sandal</a></p>
+                    <p class="sideCategory sideActive"><a href="<?php echo base_url('kategori/sepatu')?>">Sepatu</a></p>
+                    <p class="sideCategory"><a href="<?php echo base_url('kategori/kaos_kaki')?>">Kaos Kaki</a></p>
+                    
+
+
+            </div>
+
+            <div class="col-9">
+                <div class="title1">
+                    <h3 class="title1">Sepatu</h3>
+                </div><hr class="garis">
+
+                <div class="row row-cols-lg-5 row-cols-md-3 row-cols-xs-1 row-cols-sm-2 ">
+
+                    <?php foreach ($sepatu as $brg) : ?>
+                        <div class="col">
+                            <a href="<?php echo base_url('dashboard/detail/' .$brg->id_brg)?>">
+                                <div class="card border-0 produk">
+                                    <img class="card-img-top" src="<?php echo base_url('uploads/').$brg->gambar?>" alt="Card image cap">
+                                    <div class="card-img-overlay ">
+                                        <p class="card-text"><a href="<?php echo base_url('dashboard/tambah_ke_keranjang/' .$brg->id_brg)?>t">ADD TO CART</a></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $brg->nama_brg?></h5>
+                                        <p class="card-text">Rp. <?php echo number_format($brg->harga, 0,',','.') ?></p>
+                                    </div>
+                                </div>
+                            
+
+                        </div>
+                    <?php endforeach ?>
+
+               
+                </div>
+                
+            </div>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    </div>
-
-
-    <div class="row text-center mt-3">
-        <?php foreach ($sepatu as $brg) : ?>
-
-            <div class="card ml-3 mb-3" style="width: 16rem;">
-                <img class="card-img-top" src="<?php echo base_url('uploads/').$brg->gambar?>" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title mb-1"><?= $brg->nama_brg?></h5>
-                    <small><?= $brg->keterangan?></small><br>
-                    <span class="badge badge-success mb-3">Rp. <?php echo number_format($brg->harga, 0,',','.') ?></span><br>
-                    <?php echo anchor('dashboard/tambah_ke_keranjang/' .$brg->id_brg, '<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
-                    <?php echo anchor('dashboard/detail/' .$brg->id_brg, '<div class="btn btn-sm btn-success">Detail</div>') ?>
-                </div>
-            </div>
-        <?php endforeach ?>
-    </div>
-</div>

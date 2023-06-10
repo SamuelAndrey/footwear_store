@@ -91,9 +91,9 @@ class Auth extends CI_Controller{
         ]);
         if($this->form_validation->run() == FALSE)
         {
-            $this->load->view('templates/header');
+            $this->load->view('templates_admin/headerLogin');
             $this->load->view('admin/form_login_admin');
-            $this->load->view('templates/footer');
+            $this->load->view('templates_admin/footerLogin');
         }
         else
         {
