@@ -48,13 +48,13 @@
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="https://linktr.ee/mysikuil" target="_blank">Contact</a>
                     </li>
                 </ul>
                
                 <ul class="navbar-nav " style="display: flex; justify-content: space-between; ">
                     <li class=" nav-item licon">
-                        <a class="nav-link" href="#" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                        
                     </li>
                     <li class=" nav-item licon">
                         <a class="nav-link" href="<?php echo base_url('dashboard/detail_keranjang')?>" ><i class="fa-solid fa-cart-shopping position-relative">
