@@ -73,4 +73,31 @@ class Dashboard extends CI_Controller {
         $this->load->view('detail_barang', $data);
         $this->load->view('templates/footer');
     }
+
+    public function updateDataDiri(){
+        $id_member = $this->session->userdata('id_member');
+        $data['member'] = $this->model_member->getDataMember($id_member);
+        $this->load->view('templates/header');
+        $this->load->view('update_data_diri', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function updateMember() {
+        
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+
+        $data = array(
+            'username' => $username,
+            'password' => $password,
+        );
+
+        $where = array(
+            'id_member' => $this->session->userdata('id_member')
+        );
+
+        $this->model_member->update_data($where, $data, 'tb_member');
+        redirect('admin/data_barang/index');
+
+    }
 }

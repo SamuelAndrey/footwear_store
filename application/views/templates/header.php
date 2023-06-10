@@ -71,7 +71,7 @@
                             <?php if($this->session->userdata('username')){ ?>
                                 <li><div class="dropdown-item" ><?php echo $this->session->userdata('username') ?></div></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="Edit.html">Edit Usename dan Password</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('dashboard/updateDataDiri')?>">Edit Usename dan Password</a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('auth/logout')?>">Logout</a></li>
                             <?php }else{ ?>
                                 <li><a class="dropdown-item" href="<?php echo base_url('auth/login')?>">Login</a></li>
