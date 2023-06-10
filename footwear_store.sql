@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 08:40 AM
+-- Generation Time: Jun 10, 2023 at 03:20 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `footwear_store`
 --
+CREATE DATABASE IF NOT EXISTS `footwear_store` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `footwear_store`;
 
 -- --------------------------------------------------------
 
@@ -42,7 +44,13 @@ CREATE TABLE `tb_barang` (
 
 INSERT INTO `tb_barang` (`id_brg`, `nama_brg`, `kategori`, `harga`, `stok`, `gambar`) VALUES
 (10, 'Sandal KAYU1', 'Sandal', 500000, 67, 'Produk11.png'),
-(11, 'CR00C', 'Sandal', 300000, 1, 'Produk2.png');
+(11, 'CR00C', 'Sandal', 99999, 1, 'Produk2.png'),
+(12, 'Sepatu KARET', 'Sepatu', 1999999, 1, 'Sepatu_KARET.png'),
+(13, 'Sandal KARET Ijo', 'Sandal', 69999, 100, 'Sandal_KARET_Ijo.png'),
+(14, 'Sandal KARET Biru', 'Sandal', 69999, 69, 'Sandal_KARET_Biru.png'),
+(15, 'Kaos Sikuil Putih', 'Kaos Kaki', 59999, 200, 'Kaos_Sikuil_Putih.png'),
+(16, 'Kaos Sikuil Hitam', 'Kaos Kaki', 40000, 1, 'Kaos_Sikuil_Hitam.png'),
+(17, 'Sepatu COMF1', 'Sepatu', 500000, 20, 'Sepatu_COMF1.png');
 
 -- --------------------------------------------------------
 
@@ -199,7 +207,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tb_invoice`
