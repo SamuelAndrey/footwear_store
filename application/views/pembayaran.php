@@ -117,7 +117,7 @@
                                             $grand_total = $grand_total + $item['subtotal'];
                                         }
 
-                                    echo " Rp. ".number_format($grand_total, 0,',','.');
+                                    echo " Rp. ".number_format($grand_total+20000, 0,',','.');
                                     $grand_total += 20000;
                                     }else{
                                         echo "Keranjang Belanja Anda Masih Kosong";

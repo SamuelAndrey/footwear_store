@@ -56,12 +56,15 @@ class Dashboard extends CI_Controller {
         $is_processed = $this->model_invoice->index();
         if($is_processed){
             $this->cart->destroy();
-            $this->load->view('templates/header');
-
-            $this->load->view('proses_pesanan');
-            $this->load->view('templates/footer');
+            echo "<script>
+            alert('Pesanan Berhasil Diproses');
+            window.location.href = '".base_url('welcome')."';
+            </script>";
         } else {
-            echo "Maaf, Pesanan Anda Gagal diproses!";
+            echo "<script>
+            alert('Pesanan Gagal Diproses!');
+            window.location.href = '".base_url('welcome')."';
+            </script>";
         }
     }
 
