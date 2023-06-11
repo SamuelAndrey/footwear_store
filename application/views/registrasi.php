@@ -48,7 +48,7 @@
                 <button type="submit" >Register</button>
                 <p>
                     <span>Alredy a Member?</span>
-                    <a href="<?php echo base_url('auth/login') ?>"><span>Login.</span></a>
+                    <a href="<?php echo base_url('auth/loginMember') ?>"><span>Login.</span></a>
                 </p>
             </fieldset>
         </form>
