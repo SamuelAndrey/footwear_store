@@ -142,14 +142,14 @@
                             <div class="col col-md-3-2">
                                 <?php 
                                 if ($brg->stok>0) {
-                                    echo "   <label class='size-item'>
+                                    echo "  <label class='size-item'>
                                                 <input type='radio' name='list' value='40' data-content='40' /> 40
                                             </label> ";
                                     }
                                 else{
                                     echo "   <label class='size-item  outstock'>
-                                    <input type='radio' name='list' value='40' data-content='40' disabled/> 40
-                                </label> ";
+                                                <input type='radio' name='list' value='40' data-content='40' disabled/> 40
+                                            </label> ";
                                 }
                                 ?>
                               
@@ -190,9 +190,9 @@
             
                         </div>
                         <a href='<?php echo base_url('dashboard/tambah_ke_keranjang/'.$brg->id_brg )?>'>
-                            <button class='btnOrder'>ORDER</button>
+                            <button class='btnOrder' <?= ($brg->stok <= 0) ? "disabled" : ""?>>ORDER</button>
                         </a>
-         
+                        <?= ($brg->stok <= 0) ? "Stock is empty" : ""?>
                 </div>
          
             </div>

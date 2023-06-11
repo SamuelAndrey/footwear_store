@@ -34,7 +34,12 @@
                                 <div class="card border-0 produk">
                                     <img class="card-img-top" src="<?php echo base_url('uploads/').$brg->gambar?>" alt="Card image cap">
                                     <div class="card-img-overlay ">
-                                        <p class="card-text"><a href="<?php echo base_url('dashboard/tambah_ke_keranjang/' .$brg->id_brg)?>t">ADD TO CART</a></p>
+                                        <?php if ($brg->stok <= 0) { ?>
+                                            <p class="card-text"><a href="<?php echo base_url('dashboard/emptyStock')?>">ADD TO CART</a></p>
+                                        <?php } else { ?>
+                                            <p class="card-text"><a href="<?php echo base_url('dashboard/tambah_ke_keranjang/' .$brg->id_brg)?>">ADD TO CART</a></p>
+                                            
+                                        <?php } ?>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title"><?= $brg->nama_brg?></h5>

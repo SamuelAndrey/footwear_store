@@ -10,7 +10,7 @@ class Dashboard extends CI_Controller {
             Anda belum Login!
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"<span aria-hidden="true">&times;</span></button>
             </div>');
-            redirect('auth/login');
+            redirect('auth/loginMember');
         }
     }
 
@@ -141,5 +141,12 @@ class Dashboard extends CI_Controller {
         $this->load->view('templates/header');
         $this->load->view('faq');
         $this->load->view('templates/footer');
+    }
+
+    public function emptyStock() {
+        echo "<script>
+        alert('Stok barang sedang kosong');
+        window.location.href = '".base_url('welcome')."';
+        </script>";
     }
 }
