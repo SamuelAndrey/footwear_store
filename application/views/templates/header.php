@@ -35,7 +35,7 @@
                     </li>
             
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Category
                         </a>
                         <ul class="dropdown-menu">
@@ -75,7 +75,7 @@
                                 <li><a class="dropdown-item" href="<?php echo base_url('dashboard/updateDataDiri')?>">Edit Usename dan Password</a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('auth/logout')?>">Logout</a></li>
                             <?php }else{ ?>
-                                <li><a class="dropdown-item" href="<?php echo base_url('auth/login')?>">Login</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('auth/loginMember')?>">Login</a></li>
                             <?php } ?> 
  
                         </ul>

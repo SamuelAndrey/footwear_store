@@ -140,9 +140,19 @@
                                 </label>
                             </div>
                             <div class="col col-md-3-2">
-                                <label class="size-item">
-                                    <input type="radio" name="list" value="40" data-content="40" /> 40
-                                </label>
+                                <?php 
+                                if ($brg->stok>0) {
+                                    echo "   <label class='size-item'>
+                                                <input type='radio' name='list' value='40' data-content='40' /> 40
+                                            </label> ";
+                                    }
+                                else{
+                                    echo "   <label class='size-item  outstock'>
+                                    <input type='radio' name='list' value='40' data-content='40' disabled/> 40
+                                </label> ";
+                                }
+                                ?>
+                              
                             </div>
                             <div class="col col-md-3-2">
                                 <label class="size-item outstock">
@@ -179,9 +189,10 @@
                 
             
                         </div>
-                        <a href="<?php echo base_url('dashboard/tambah_ke_keranjang/'.$brg->id_brg )?>">
-                            <button class="btnOrder">ORDER</button>
+                        <a href='<?php echo base_url('dashboard/tambah_ke_keranjang/'.$brg->id_brg )?>'>
+                            <button class='btnOrder'>ORDER</button>
                         </a>
+         
                 </div>
          
             </div>

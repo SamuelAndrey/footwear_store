@@ -1,5 +1,5 @@
 <head>
-   <title>Navbar</title>
+   <title>Cart</title>
    <style>
       .container {
          min-height: 39em;

@@ -5,7 +5,7 @@
         <a href=""><img src="<?php echo base_url()?>assets/img/postersandal.png" alt="poster" style="width:100%;" ></a>
     </div>
 
-    <div class="container" id="shop" style="padding-top:5vh; padding-bottom:5vh; min-height: 39em; ">
+    <div class="container" id="shop" style="padding-top:5vh; padding-bottom:5vh; min-height: 46em; ">
         <div class="row ">
 
             <div class="col-3">

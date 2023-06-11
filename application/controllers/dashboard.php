@@ -135,4 +135,11 @@ class Dashboard extends CI_Controller {
 
 
     }
+
+    public function faq()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('faq');
+        $this->load->view('templates/footer');
+    }
 }

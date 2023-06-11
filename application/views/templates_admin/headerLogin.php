@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="<?php echo base_url()?>assets/img/sikuil2.png" type="image/x-icon">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Admin MySikuil</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url()?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
