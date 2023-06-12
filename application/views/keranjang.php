@@ -105,7 +105,7 @@
                         </td>
                         <td class="align-middle text-center">40</td>
 
-                        <td class="align-middle text-center"><input type="number" value="1">
+                        <td class="align-middle text-center">
                            <?php echo $items['qty'] ?>
                         </td>
                         <td class="align-middle text-center">

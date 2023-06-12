@@ -79,29 +79,29 @@
                     <legend  class="float-none w-auto p-2" >Payments</legend>
                     
                     <label for="name">Full Name</label>
-                    <input type="text" id="" name="" value="<?= $this->session->userdata('nama') ?>" readonly><br>
+                    <input type="text" id="" name="" value="<?= $this->session->userdata('nama') ?>" readonly required><br>
 
                     <label for="address">Address</label>
-                    <input type="text" id="alamat" name="alamat" placeholder="Alamat Lengkap"><br>
+                    <input type="text" id="alamat" name="alamat" placeholder="Alamat Lengkap" required><br>
 
                     <label for="phone">Phone</label>
-                    <input type="text" id="no_telp" name="no_telp" placeholder="No. Telepon"><br>  
+                    <input type="number" id="no_telp" name="no_telp" placeholder="No. Telepon" required><br>  
 
                     <label for="banknumber">Your Bank Number</label>
-                    <input type="text" id="no_rek" name="no_rek" placeholder="Bank Number"><br>  
+                    <input type="text" id="no_rek" name="no_rek" placeholder="Bank Number" required><br>  
 
                     <div>
                         <span style="float: left;">
                             <label for="kurir">Delivery Service</label><br>
                         
-                                <select id="kurir" name="kurir">
+                                <select id="kurir" name="kurir" required>
                                     <option value="JNE">JNE</option>
                                     <option value="JNT">JNT</option>
                                 </select>
                             </span>
                             <span style=" margin-left:2em;">
                             <label for="kurir">BANK</label><br>
-                                <select id="bank" name="bank" style=" margin-left:2em;">
+                                <select id="bank" name="bank" style=" margin-left:2em;" required>
                                     <option value="BRI">BRI</option>
                                     <option value="BCA">BCA</option>
                                 </select>

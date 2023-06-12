@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <button class="btn btn-sm mb-3" data-toggle="modal" data-target="#tambah_barang" style="color:lime; background-color:#2F2F2F;">Add Product</button>
+    <button class="btn btn-lg mb-3" data-toggle="modal" data-target="#tambah_barang" style="color:lime; background-color:#2F2F2F;">Add Product</button>
 
     <table class="table table-bordered text-success" style="background-color:#000000;">
         <tr class="table-active">
@@ -57,36 +57,31 @@
 
           <div class="form-group">
             <label>Nama Barang</label>
-            <input type="text" name="nama_brg" class="form-control"></input>
+            <input type="text" name="nama_brg" class="form-control" title="Harap isi nama Produk" required></input>
           </div>
 
           <div class="form-group">
             <label>Kategori</label>
-            <select class="form-control" name="kategori">
+            <select class="form-control" name="kategori" title="Harap isi kategori produk" required>
               <option>Sepatu</option>
               <option>Sandal</option>
               <option>Kaos Kaki</option>
-              <option>Elektronik</option>
-              <option>Pakaian Pria</option>
-              <option>Pakaian Wanita</option>
-              <option>Pakaian Anak-Anak</option>
-              <option>Peralatan Olahraga</option>
             </select>
           </div>
 
           <div class="form-group">
             <label>Harga</label>
-            <input type="text" name="harga" class="form-control"></input>
+            <input type="number" name="harga" class="form-control" title="Harap isi harga produk" required></input>
           </div>
 
           <div class="form-group">
             <label>Stock</label>
-            <input type="text" name="stok" class="form-control"></input>
+            <input type="number" name="stok" class="form-control" title="Harap isi stock Produk" required></input>
           </div>
 
           <div class="form-group">
             <label>Gambar Produk</label><br>
-            <input type="file" name="gambar" class="form-control"></input>
+            <input type="file" name="gambar" class="form-control" title="Harap masukan gambar Produk" required></input>
           </div>
 
       </div>

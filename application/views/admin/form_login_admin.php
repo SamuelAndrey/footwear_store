@@ -24,12 +24,12 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Username Anda" name="username" require>
+                                                placeholder="Username Anda" name="username" required>
                                                 <?php echo form_error('username', '<div class="text-danger small ml-2">','</div>'); ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password" name="password" require    >
+                                                id="exampleInputPassword" placeholder="Password" name="password" required>
                                                 <?php echo form_error('password', '<div class="text-danger small ml-2">','</div>'); ?>
                                         </div>
                                         

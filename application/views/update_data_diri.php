@@ -11,9 +11,9 @@
                 <fieldset class="border border-dark w-100 p-3 mx-auto " style="border-radius: 5px; " >
                     <legend  class="float-none w-auto p-2" >Edit Username dan Password</legend>
                     <label for="nama">Nama</label>
-                    <input type="text" id="nama" name="nama" placeholder=" Full Name" value="<?= $mbr->nama ?>"><br>
+                    <input type="text" id="nama" name="nama" placeholder=" Full Name" value="<?= $mbr->nama ?>" required><br>
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder=" Username" value="<?= $mbr->username ?>"><br><br>
+                    <input type="text" id="username" name="username" placeholder=" Username" value="<?= $mbr->username ?>" required><br><br>
 
                     <i>Kosongi jika tidak ingin merubah password</i>
                     <input type="text" id="newPassword" name="newPassword" placeholder="New Password" value=""><br>
@@ -21,7 +21,7 @@
                     <input type="text" id="newPassword1" name="newPassword1" placeholder="Type Again New Password" value=""><br><br>
 
                     <i>Masukkan password lama</i>
-                    <input type="password" id="conPassword" name="password" placeholder="Old Password" require><br>
+                    <input type="password" id="conPassword" name="password" placeholder="Old Password" required><br>
 
                     <input type="hidden" name="verifPassword" value="<?= $mbr->password ?>">
                     
