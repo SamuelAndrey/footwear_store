@@ -66,22 +66,17 @@
               <option>Sepatu</option>
               <option>Sandal</option>
               <option>Kaos Kaki</option>
-              <option>Elektronik</option>
-              <option>Pakaian Pria</option>
-              <option>Pakaian Wanita</option>
-              <option>Pakaian Anak-Anak</option>
-              <option>Peralatan Olahraga</option>
             </select>
           </div>
 
           <div class="form-group">
             <label>Harga</label>
-            <input type="text" name="harga" class="form-control"></input>
+            <input type="number" name="harga" class="form-control"></input>
           </div>
 
           <div class="form-group">
             <label>Stock</label>
-            <input type="text" name="stok" class="form-control"></input>
+            <input type="number" name="stok" class="form-control"></input>
           </div>
 
           <div class="form-group">
