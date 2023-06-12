@@ -57,12 +57,12 @@
 
           <div class="form-group">
             <label>Nama Barang</label>
-            <input type="text" name="nama_brg" class="form-control"></input>
+            <input type="text" name="nama_brg" class="form-control" required></input>
           </div>
 
           <div class="form-group">
             <label>Kategori</label>
-            <select class="form-control" name="kategori">
+            <select class="form-control" name="kategori" required>
               <option>Sepatu</option>
               <option>Sandal</option>
               <option>Kaos Kaki</option>
@@ -71,17 +71,17 @@
 
           <div class="form-group">
             <label>Harga</label>
-            <input type="number" name="harga" class="form-control"></input>
+            <input type="number" name="harga" class="form-control" required></input>
           </div>
 
           <div class="form-group">
             <label>Stock</label>
-            <input type="number" name="stok" class="form-control"></input>
+            <input type="number" name="stok" class="form-control" required></input>
           </div>
 
           <div class="form-group">
             <label>Gambar Produk</label><br>
-            <input type="file" name="gambar" class="form-control"></input>
+            <input type="file" name="gambar" class="form-control" required></input>
           </div>
 
       </div>
