@@ -88,7 +88,7 @@
                     <input type="number" id="no_telp" name="no_telp" placeholder="No. Telepon" required><br>  
 
                     <label for="banknumber">Your Bank Number</label>
-                    <input type="text" id="no_rek" name="no_rek" placeholder="Bank Number" required><br>  
+                    <input type="number" id="no_rek" name="no_rek" placeholder="Bank Number" required><br>  
 
                     <div>
                         <span style="float: left;">
