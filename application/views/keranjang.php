@@ -105,8 +105,8 @@
                         </td>
                         <td class="align-middle text-center">40</td>
 
-                        <td class="align-middle text-center"><input type="number" value="1">
-                           <?php echo $items['qty'] ?>
+                        <td class="align-middle text-center"><input type="number" value="<?php echo $items['qty'] ?>" readonly>
+                           
                         </td>
                         <td class="align-middle text-center">
                            Rp. <?php echo number_format($items['subtotal'], 0, ',', '.') ?>
