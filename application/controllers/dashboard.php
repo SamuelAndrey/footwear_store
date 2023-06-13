@@ -52,20 +52,48 @@ class Dashboard extends CI_Controller {
 
     public function proses_pesanan()
     {
-        $is_processed = $this->model_invoice->index();
-        if($is_processed){
-            $this->cart->destroy();
+        if ($this->cart->total_items() == 0) {
             echo "<script>
-            alert('Pesanan Berhasil Diproses');
-            window.location.href = '".base_url('welcome')."';
+            alert('Keranjang Belanja Anda Kosong!');
+            window.location.href = '" . base_url('welcome') . "';
             </script>";
+            return;
+        }
+
+        $is_valid = true;
+
+        // Check if the order quantity exceeds the available stock
+        foreach ($this->cart->contents() as $item) {
+            $barang = $this->model_barang->find($item['id']);
+            if ($item['qty'] > $barang->stok) {
+                $is_valid = false;
+                break;
+            }
+        }
+
+        if ($is_valid) {
+            $is_processed = $this->model_invoice->index();
+            if ($is_processed) {
+                $this->cart->destroy();
+                echo "<script>
+                alert('Pesanan Berhasil Diproses');
+                window.location.href = '" . base_url('welcome') . "';
+                </script>";
+            } else {
+                echo "<script>
+                alert('Pesanan Gagal Diproses!');
+                window.location.href = '" . base_url('welcome') . "';
+                </script>";
+            }
         } else {
             echo "<script>
-            alert('Pesanan Gagal Diproses!');
-            window.location.href = '".base_url('welcome')."';
+            alert('Pesanan Melebihi Jumlah Stok!');
+            window.location.href = '" . base_url('welcome') . "';
             </script>";
         }
     }
+
+
 
     public function detail($id_brg){
         $data['barang'] = $this->model_barang->detail_brg($id_brg);
