@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label for="">Stock</label>
-                <input type="number" name="stok" class="form-control" value="<?= $brg->stok ?>" required></input>
+                <input type="number" name="stok" min="0" class="form-control" value="<?= $brg->stok ?>" required></input>
             </div>
             <div class="container d-flex justify-content-center align-items-center">
                 <button type="submit" class="btn btn-lg mt-3" style="color:black; background-color:lime;">Simpan</button>

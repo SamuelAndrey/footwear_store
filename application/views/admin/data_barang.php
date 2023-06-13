@@ -25,7 +25,7 @@
                 <td><img class="card-img-top" style="width:170px;" src="<?php echo base_url('uploads/').$brg->gambar?>" alt="Card image cap"></td>
                 <td><?=  $brg->kategori ?></td>
                 <td><?=  $brg->harga ?></td>
-                <td><?=  $brg->stok ?></td>
+                <td><?php echo ($brg->stok >= 0) ? $brg->stok : 0 ?></td>
                 <!-- <td>
                     <div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>
                 </td> -->
@@ -40,6 +40,7 @@
 
     </table>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="tambah_barang" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -76,7 +77,7 @@
 
           <div class="form-group">
             <label>Stock</label>
-            <input type="number" name="stok" class="form-control" title="Harap isi stock Produk" required></input>
+            <input type="number" name="stok" min="0" class="form-control" title="Harap isi stock Produk" required></input>
           </div>
 
           <div class="form-group">
