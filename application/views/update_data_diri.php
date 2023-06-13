@@ -16,9 +16,9 @@
                     <input type="text" id="username" name="username" placeholder=" Username" value="<?= $mbr->username ?>" required><br><br>
 
                     <i>Kosongi jika tidak ingin merubah password</i>
-                    <input type="text" id="newPassword" name="newPassword" placeholder="New Password" value=""><br>
+                    <input type="password" id="newPassword" name="newPassword" placeholder="New Password" value=""><br>
 
-                    <input type="text" id="newPassword1" name="newPassword1" placeholder="Type Again New Password" value=""><br><br>
+                    <input type="password" id="newPassword1" name="newPassword1" placeholder="Type Again New Password" value=""><br><br>
 
                     <i>Masukkan password lama</i>
                     <input type="password" id="conPassword" name="password" placeholder="Old Password" required><br>

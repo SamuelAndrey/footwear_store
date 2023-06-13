@@ -124,6 +124,8 @@ class Dashboard extends CI_Controller {
                     alert('Berhasil Merubah Data!');
                     window.location.href = '".base_url('dashboard/updateDataDiri')."';
                     </script>";
+
+            redirect('auth/logout');
         } else {
             echo "<script>
                     alert('Password salah atau kosong!');

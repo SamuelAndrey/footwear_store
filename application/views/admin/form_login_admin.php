@@ -2,7 +2,11 @@
 <body class="bg-dark" style="background-image: url('<?= base_url('assets/')?>img/matrixbg.png');">
 
     <div class="container">
-        <h1 align="center" style="color:lime; padding-top:30px; margin-bottom:0; font-family: 'Lilita One', cursive;">MySikuil</h1>
+ 
+        <a href="<?php echo base_url('welcome/') ?>">
+             <div class="d-flex justify-content-center "><img src="<?php echo base_url()?>assets/img/sikuil2.png"  alt="" style="height:100px; width:auto; margin-top:2em;"></div>    
+        </a>
+               <h1 align="center" style="color:white; padding-top:30px; margin-bottom:0; font-family: 'Lilita One', cursive;">MySikuil</h1>
 
         <!-- Outer Row -->
         <div class="row justify-content-center ">
