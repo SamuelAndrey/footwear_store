@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 03:20 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- Generation Time: Jun 13, 2023 at 02:48 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `footwear_store`
 --
-CREATE DATABASE IF NOT EXISTS `footwear_store` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `footwear_store`;
 
 -- --------------------------------------------------------
 
@@ -34,9 +32,9 @@ CREATE TABLE `tb_barang` (
   `nama_brg` varchar(120) NOT NULL,
   `kategori` varchar(60) NOT NULL,
   `harga` int(11) NOT NULL,
-  `stok` int(4) NOT NULL,
+  `stok` int(4) UNSIGNED NOT NULL,
   `gambar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_barang`
@@ -44,8 +42,8 @@ CREATE TABLE `tb_barang` (
 
 INSERT INTO `tb_barang` (`id_brg`, `nama_brg`, `kategori`, `harga`, `stok`, `gambar`) VALUES
 (10, 'Sandal KAYU1', 'Sandal', 500000, 67, 'Produk11.png'),
-(11, 'CR00C', 'Sandal', 99999, 1, 'Produk2.png'),
-(12, 'Sepatu KARET', 'Sepatu', 1999999, 1, 'Sepatu_KARET.png'),
+(11, 'CR00C', 'Sepatu', 99999, 0, 'Produk2.png'),
+(12, 'Sepatu KARET', 'Sepatu', 1999999, 0, 'Sepatu_KARET.png'),
 (13, 'Sandal KARET Ijo', 'Sandal', 69999, 100, 'Sandal_KARET_Ijo.png'),
 (14, 'Sandal KARET Biru', 'Sandal', 69999, 69, 'Sandal_KARET_Biru.png'),
 (15, 'Kaos Sikuil Putih', 'Kaos Kaki', 59999, 200, 'Kaos_Sikuil_Putih.png'),
@@ -69,17 +67,16 @@ CREATE TABLE `tb_invoice` (
   `bank` varchar(100) NOT NULL,
   `status_konfirmasi` int(1) NOT NULL,
   `no_telepon` varchar(20) NOT NULL,
-  `ongkir` int(11) NOT NULL,
   `total_bayar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_invoice`
 --
 
-INSERT INTO `tb_invoice` (`id`, `id_member`, `nama`, `alamat`, `tgl_pesan`, `batas_bayar`, `no_rekening`, `bank`, `status_konfirmasi`, `no_telepon`, `ongkir`, `total_bayar`) VALUES
-(13, 1, 'Samuel Andrey Aji Prasetya', 'Ds konoha', '2023-06-09 16:53:49', '2023-06-10 16:53:49', '0987 1234452345', 'BNI', 1, '08123234212', 0, 420000),
-(14, 2, 'user', 'asd', '2023-06-10 13:31:10', '2023-06-11 13:31:10', 'asd', 'BRI', 0, 'asd', 0, 1020000);
+INSERT INTO `tb_invoice` (`id`, `id_member`, `nama`, `alamat`, `tgl_pesan`, `batas_bayar`, `no_rekening`, `bank`, `status_konfirmasi`, `no_telepon`, `total_bayar`) VALUES
+(13, 1, 'Samuel Andrey Aji Prasetya', 'Ds konoha', '2023-06-09 16:53:49', '2023-06-10 16:53:49', '0987 1234452345', 'BNI', 1, '08123234212', 420000),
+(22, 2, 'user', 'Semarang Indah', '2023-06-13 19:46:26', '2023-06-14 19:46:26', '09482951022', 'BRI', 1, '0895705458597', 119999);
 
 -- --------------------------------------------------------
 
@@ -93,7 +90,7 @@ CREATE TABLE `tb_member` (
   `email` varchar(50) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_member`
@@ -118,7 +115,7 @@ CREATE TABLE `tb_pesanan` (
   `jumlah` int(3) NOT NULL,
   `harga` int(10) NOT NULL,
   `pilihan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_pesanan`
@@ -131,7 +128,13 @@ INSERT INTO `tb_pesanan` (`id`, `id_invoice`, `id_brg`, `nama_brg`, `jumlah`, `h
 (20, 12, 9, 'kulkas', 1, 9000000, ''),
 (21, 12, 1, 'Convers m71', 1, 400000, ''),
 (22, 13, 1, 'Convers m71', 1, 400000, ''),
-(23, 14, 10, 'Sandal KAYU1', 2, 500000, '');
+(23, 14, 10, 'Sandal KAYU1', 2, 500000, ''),
+(24, 15, 12, 'Sepatu KARET', 2, 1999999, ''),
+(25, 16, 11, 'CR00C', 2, 99999, ''),
+(26, 17, 11, 'CR00C', 3, 99999, ''),
+(27, 18, 12, 'Sepatu KARET', 2, 1999999, ''),
+(29, 20, 11, 'CR00C', 1, 99999, ''),
+(30, 22, 11, 'CR00C', 1, 99999, '');
 
 --
 -- Triggers `tb_pesanan`
@@ -156,7 +159,7 @@ CREATE TABLE `tb_user` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `role_id` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_user`
@@ -213,7 +216,7 @@ ALTER TABLE `tb_barang`
 -- AUTO_INCREMENT for table `tb_invoice`
 --
 ALTER TABLE `tb_invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `tb_member`
@@ -225,7 +228,7 @@ ALTER TABLE `tb_member`
 -- AUTO_INCREMENT for table `tb_pesanan`
 --
 ALTER TABLE `tb_pesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
