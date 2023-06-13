@@ -1,11 +1,34 @@
+<head>
+    <style>
+        .table1 td{
+           color : white !important;
+           font-size: 1.1em;
+        }
+    </style>
+</head>
 <div class="container-fluid">
     <h4>Detail Pesanan <div class="btn btn-sm btn-success">No. Invoice : <?php echo $invoice->id?></div>
     </h4>
 
-    <p class="text-white">No Rekening : <?= $invoice->no_rekening?></p>
-    <p class="text-white">Bank : <?= $invoice->bank?></p>
-    <p class="text-white">No telepon : <?= $invoice->no_telepon ?></p>
-    <p class="text-white">Total Bayar : Rp. <?= number_format($invoice->total_bayar, 0, ',','.') ?></p>
+    <table  class="table1 table table-borderless w-50 " >
+            <tr>
+                <td>No Rekening </td>
+                <td><?= $invoice->no_rekening?></td>
+            </tr>
+            <tr>
+                <td>Bank </td>
+                <td><?= $invoice->bank?></td>
+            </tr>
+            <tr>
+                <td>No telepon </td>
+                <td><?= $invoice->no_rekening?></td>
+            </tr>
+            <tr>
+                <td>Total Bayar</td>
+                <td>Rp. <?= number_format($invoice->total_bayar, 0, ',','.') ?></td>
+            </tr>
+            
+    </table>
 
     <table class="table table-bordered table-hover table-striped">
         <tr>

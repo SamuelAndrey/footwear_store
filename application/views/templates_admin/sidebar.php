@@ -50,16 +50,17 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/konfirmasi_transaksi') ?>">
+                    <!--<i class="fas fa-fw fa-table"></i>-->
+                    <span class="text-success"><h4>Payment Confirmation</h4></span></a>
+            </li>
+            
+            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/invoice') ?>">
                     <!--<i class="fas fa-fw fa-table"></i>-->
                     <span class="text-success"><h4>Invoices</h4></span></a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/konfirmasi_transaksi') ?>">
-                    <!--<i class="fas fa-fw fa-table"></i>-->
-                    <span class="text-success"><h4>Payment Confirmation</h4></span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

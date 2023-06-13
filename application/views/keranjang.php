@@ -8,7 +8,7 @@
       }
 
       .produk {
-         height: 15em;
+         
          width: 10em;
          border-radius: 0;
          background-color: transparent !important;

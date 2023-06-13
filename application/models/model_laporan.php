@@ -2,8 +2,8 @@
 
 class model_laporan extends CI_Model {
     public function getRequest() {
-        $this->db->where('status_konfirmasi', '2');
-        $this->db->or_where('status_konfirmasi', '0');
+        $this->db->where('status_konfirmasi', '0');
+        
         
         $result = $this->db->get('tb_invoice');
         if ($result->num_rows() > 0){

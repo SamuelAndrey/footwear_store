@@ -2,10 +2,10 @@
     <link href="<?php echo base_url()?>assets/css/shop.css" rel="stylesheet" type="text/css">
 </head>
     <div class="container-xxxl">
-        <a href="<?php echo base_url('dashboard/detail/10')?>"><img src="<?php echo base_url()?>assets/img/postersandal.png" alt="poster" style="width:100%;" ></a>
+        <a href="<?php echo base_url('welcome/') ?>#shop"><img src="<?php echo base_url()?>assets/img/postersandal.png" alt="poster" style="width:100%;" ></a>
     </div>
 
-    <div class="container" id="shop" style="padding-top:5vh; padding-bottom:5vh; min-height: 46em; ">
+    <div class="container" id="shop" style="padding-top:10vh; padding-bottom:5vh; min-height: 46em; ">
         <div class="row ">
 
             <div class="col-3">
